@@ -3,10 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CancelComponent } from './cancel/cancel.component';
+import { DialogComponent } from './dialog/dialog.component';
+import {
+  MatDialogModule,
+} from '@angular/material';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CancelComponent,
+    DialogComponent
+  ],
+  exports: [
+    MatDialogModule
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CancelService } from './services/cancel.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-unit-testing-jest';
+
+  constructor(private cancelService: CancelService) { }
+
+  openCancelWindow() {
+    this.cancelService.openCancelDialog();
+  }
 }
+
